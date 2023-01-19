@@ -9,33 +9,37 @@
             this._salary = salary;
         }
 
-        public void GetEmployeeDetails()
+        public void GetEmployeeSalary()
         {
-            Console.WriteLine("Details of the Employee are following there : ");
+            
             Console.WriteLine("Salary : " + _salary);
         }
 
         public static class CompanyDetail
         {
             public static string Company = "Simform Solutions";
-            public static void GetCompanyName()
+            public static string Address = " 5th Floor, 501 Binori Bsquare2 Nr Double Tree By Hilton, Ambli Rd, Bopal, Ahmedabad, Gujarat";
+            public static void GetCompanyDetail()
             {
+                Console.WriteLine("Details of the Company are following there : ");
                 Console.WriteLine("Company Name :" + Company);
+                Console.WriteLine("Address :" + Address + "\n");
             }
         }
-        
         public static void Main(string[] args)
         {
-            Employee emp = new Employee(25000);
-            emp.GetEmployeeDetails();
-            Details details = new Details();
-            CompanyDetail.GetCompanyName();
-            details.EmpId();
-            details.EmpName();
-            details.Age();
-            details.Designation();
+            CompanyDetail.GetCompanyDetail();
+
+            EmployeeDetails details = new EmployeeDetails();
+            details.GetEmployeeId();
+            details.GetEmployeeName();
+            details.GetEmployeeAge();
+            details.GetEmployeeDesignation();
             details.DeptName = "Asp.Net";
             details.DeptDetail();
+
+            Employee emp = new Employee(25000);
+            emp.GetEmployeeSalary();
         }
     }
 }

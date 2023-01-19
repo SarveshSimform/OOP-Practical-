@@ -8,10 +8,10 @@ namespace OOP_Demo
 {
     internal interface IEmployee
     {
-        public void EmpName();
-        public void  Designation();
-        public void EmpId();
-        public void Age();
+        public void GetEmployeeId();
+        public void GetEmployeeAge();
+        public void GetEmployeeName();
+        public void GetEmployeeDesignation();
     }
     public abstract class DeptDetails
     {
@@ -27,7 +27,7 @@ namespace OOP_Demo
             {
                 if (EmpDesignation != null)
                 {
-                    throw new Exception("Please enter Designation of the employee");
+                    throw new Exception("Please enter GetEmployeeDesignation of the employee");
                 }
                 else
                 {
@@ -35,6 +35,6 @@ namespace OOP_Demo
                 }
             }
         }
-        protected internal abstract void DeptDetail();
+        internal abstract void DeptDetail();
     }
 }
