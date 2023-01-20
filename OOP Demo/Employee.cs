@@ -40,6 +40,15 @@
 
             Employee emp = new Employee(25000);
             emp.GetEmployeeSalary();
+
+            Manager manager = new Manager();
+            manager.GetEmployeeId();
+            manager.GetEmployeeName();
+            manager.GetEmployeeAge();
+            manager.GetEmployeeDesignation();
+            manager.GetManagerProject();
+            Employee managerSalary = new Employee(70000);
+            managerSalary.GetEmployeeSalary();
         }
     }
 }
